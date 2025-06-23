@@ -1,26 +1,52 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
+/*
+1 meter = 3.281 feet
+1 liter = 0.264 gallon
+1 kilogram = 2.204 pound
+*/
 
-//ok, so we want
+//so what we want to do is grab the value from the input field when th ebutton is pressed and have the value appear in some template literals and some mutated version of the value as the conversion. in addition, you have to either create the title-description element where the conversion will appear with createElement or change the textContent
 
-let pass1 = document.getElementById("pass1")
-let pass2 = document.getElementById("pass2")
+let cardDescriptionEls = document.querySelectorAll(".card-description")
+const input = document.getElementById("input");
+const btn = document.getElementById("btn");
 
-function genPass(){
-    pass1.textContent = "";
-    pass2.textContent = "";
-    for(let i=0; i < 15; i++){
-        pass1.textContent += characters[ranNumInRange()]
-        pass2.textContent += characters[ranNumInRange()]
-        }
+
+function meters2feet(quant){
+    return (quant * 3.281).toFixed(2)
 }
 
-function ranNumInRange(){
-    return Math.floor(Math.random()*characters.length)
+function feet2meters(quant){
+    return (quant / 3.281).toFixed(2)
 }
 
+function liters2gallons(quant){
+    return (quant * 0.264).toFixed(2)
+}
 
-//maybe 
+function gallons2liters(quant){
+    return (quant / 0.264).toFixed(2)
+}
 
-//ok now i want it to spit out a string of 15 characters. i guess i can write a for loop with step size of 15. it would cycle through a random item in the array (meaning i need to make a random num function) and append it to the array, either with += or push method. im still missing something tho... not push bc i would need to create a new array and that seems to o complex
+function kg2lbs(quant){
+    return (quant * 2.204).toFixed(2)
+}
 
+function lbs2kg(quant){
+    return (quant / 2.204).toFixed(2)
+}
+
+btn.addEventListener("click", function (){
+    
+    const btn = document.getElementById("btn");
+    const cardDescriptions = [
+    `${input.value} meters = ${meters2feet(input.value)} feet | ${input.value} feet = ${feet2meters(input.value)} meters`, 
+    `${input.value} liters = ${liters2gallons(input.value)} gallons | ${input.value} gallons = ${gallons2liters(input.value)} liters`,
+    `${input.value} kilos = ${kg2lbs(input.value)} pounds | ${input.value} pounds = ${lbs2kg(input.value)} kilos`
+]
+    for(let i=0; i<cardDescriptionEls.length; i++){
+        cardDescriptionEls[i].textContent = cardDescriptions[i]
+    }
+    
+})
+
+console.log(descList)

@@ -1,57 +1,71 @@
 body {
-    margin: 48px 32px;
-    background-color: #1F2937;
-    font-family: "Karla", sans-serif;
+    margin: 0;
+    background-color: #F4F4F4;
+    color: #353535;
+    font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
 }
 
+#header{
+    background-color: #6943FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-bottom: 16px;
+    padding: 8px 0px 16px;
+}
+
 h1{
-    color: #10B981;
-    font-weight: 750;
-    margin-bottom: 0px;
+    margin: 0px;
+    color: #FFFFFF;
 }
 
-h1::first-line{
+input{
+    display: block;
+    width: 120px;
+    border: 2px solid #FFFFFF;
+    background-color: #6943FF;
     color: white;
-}
-
-p{
-    color: #D5D4D8;
-}
-
-.button-wrapper{
-    border-bottom: 1px solid black;
-    margin-bottom: 16px;;
+    height: 80px;
+    border-radius: 8px;
+    font-size: 40px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 button{
-    margin: 16px 0;
-    background-color: #10B981;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-.placeholder{
-    background-color: #273549;
-    width: 140px;
-    text-align: center;
-    padding: 8px;
-    border-radius: 8px;
-    min-height: 16px;
     display: block;
+    width: 120px;
+    color: #3D3D3D;
+    background-color: white;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
 }
 
-#password-row{
+#main{
     display: flex;
-    justify-content: space-between;
-
+    flex-direction: column;
+    justify-content: center;
 }
 
-.pass{
-    margin: 0;
-    color: #10B981;
+.card{
+    background-color: white;
+    margin: 0 16px 16px;
+    text-align: center;
+    padding: 12px;
+}
+
+.card-title{
+    color: #5A537B;
+    font-weight: 600;
+    font-size: 20px;   
+}
+
+.card-description{
+    
 }

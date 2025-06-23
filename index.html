@@ -2,28 +2,24 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="header">
-            <h1>Metric/Imperial Unit Conversion</h1>
-            <input type="text" id="input">
-            <button id="btn">Convert</button>
+        <h1>Generate a <br>
+        random password</h1>
+        <p>Never use a weak password again</p>
+        <div class="button-wrapper">
+            <button onclick="genPass()">Generate Passwords</button>
         </div>
-        <div id="main">
-            <div class="card">
-                <div class="card-title">Length (Meter/Feet)</div>
-                <div class="card-description">description</div>
+        <div id="password-row">
+            <div class="placeholder">
+                <p id="pass1" class="pass"></p>
             </div>
-            <div class="card">
-                <div class="card-title">Volume (Liters/Gallons)</div>
-                <div class="card-description">description</div>
+            <div class="placeholder">
+                <p id="pass2" class="pass">
             </div>
-            <div class="card">                
-                <div class="card-title">Mass (Kilograms/Pounds)</div>
-                <div class="card-description">description<div>
-            </div>
-          <script src="index.js"></script>
+        </div>
+        <script src="index.js"></script>
     </body>
 </html>
